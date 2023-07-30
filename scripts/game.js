@@ -38,11 +38,21 @@ function startNewGame() {
     return;
   }
 
+  if (window.innerHeight < 700 && window.scrollY < 50) {
+    startNewGameBtnElement.textContent = "Scroll";
+
+    function resetStartButton() {
+      if (window.scrollY > 50) {
+        startNewGameBtnElement.textContent = "Start New Game";
+      }
+    }
+    window.addEventListener("scroll", resetStartButton)
+  }
+
   resetGameStatus();
   updatePlayerName();
 
   gameAreaElement.style.display = "block";
-
 }
 
 function switchPlayer() {
