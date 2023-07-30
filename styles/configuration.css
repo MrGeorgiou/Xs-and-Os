@@ -52,6 +52,8 @@
     padding: 0;
     margin: 0;
     display: flex;
+    width: 90vw;
+    max-width: 650px;
 }
 
 #game-config li {
@@ -82,6 +84,25 @@
     font-size: 1.5rem;
     margin: 0.5rem 0;
     
+}
+
+@media (max-width: 450px) {
+    #game-config li {
+        margin: 5vw;
+        padding: 5vw;
+    }
+
+    #game-config h2 {
+        font-size: 4.5vw;
+    }
+
+    #game-config h3 {
+        font-size: 5.5vw;
+    }
+
+    #game-config p {
+        font-size: 10vw;
+    }
 }
 
 #game-config h3.theme-1 {
