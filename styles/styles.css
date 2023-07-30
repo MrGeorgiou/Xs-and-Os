@@ -16,6 +16,9 @@ body {
   font-family: "Open Sans", sans-serif;
   padding: 0;
   text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 body.theme-1 {
@@ -49,7 +52,6 @@ body.theme-2 {
   margin: 0;
   font-size: 2.5rem;
 }
-
 
 #main-header h3 {
     display: block;
@@ -139,7 +141,7 @@ button.alt-theme-1:hover {
  button.alt-theme-2 {
   color: black;
   background-color: inherit;
-  border-color: transparent
+  border-color: transparent;
 }
 
 button.alt-theme-2:hover {
@@ -150,10 +152,17 @@ button.alt-theme-2:hover {
 footer {
   border-top: 1px solid white;
   padding: 0 1rem;
+  margin-top: auto;
 }
 
 footer.theme-1 {
   background-color: black;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+footer.theme-2 {
+  background-color: var(--off-white);
+  border-top: 1px solid var(--background-light-tertiary);
 }
 
 #created-by {

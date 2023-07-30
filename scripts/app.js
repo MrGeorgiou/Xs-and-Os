@@ -26,6 +26,7 @@ const mainHeaderElement = document.getElementById("main-header");
 const bodyElement = document.querySelector("body");;
 const gameConfigListItems = document.querySelectorAll("#game-config li");
 const h3ConfigElements = document.querySelectorAll("#game-config h3");
+const footer = document.getElementById("footer");
 
 const editPlayer1BtnElement = document.getElementById("edit-player-1-btn");
 const editPlayer2BtnElement = document.getElementById("edit-player-2-btn");
@@ -62,7 +63,7 @@ startNewGameBtnElement.addEventListener("click", startNewGame);
 
 gameField.addEventListener("click", selectGameField);
 
-const themeElements = [bodyElement, mainHeaderElement, toggleThemeBtnElement, backdropOverlayElement, namingErrorElement, emptyFieldErrorElement, configOverlayElement, gameOverElement, activePlayerNameElement];
+const themeElements = [bodyElement, mainHeaderElement, toggleThemeBtnElement, backdropOverlayElement, namingErrorElement, emptyFieldErrorElement, configOverlayElement, gameOverElement, activePlayerNameElement, footer];
 const buttons = [namingErrorBtnElement, emptyFieldErrorBtnElement, submitBtnElement, startNewGameBtnElement];
 const altButtons = [cancelFormBtnElement, editPlayer1BtnElement, editPlayer2BtnElement];
 
