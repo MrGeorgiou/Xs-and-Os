@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xs & Os</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" 
+    rel="stylesheet" />
+
+    <link rel="stylesheet" href="styles/styles.css"/>
+    <link rel="stylesheet" href="styles/overlays.css" />
+    <link rel="stylesheet" href="styles/configuration.css" />
+    <link rel="stylesheet" href="styles/game.css" />
+
+    <script src="scripts/config.js" defer></script>
+    <script src="scripts/game.js" defer></script>
+    <script src="scripts/app.js" defer></script>
+  </head>
+
+  <body class="theme-1">
+    <div id="backdrop" class="theme-1"></div>
+    <header id="main-header" class="theme-1">
+      <h1>Xs & Os</h1>
+      
+        <h3>
+          Built with HTML, CSS & JavaScript,
+          <br />aka blood, sweat and tears.
+         <!-- to showcase Javscript's ability to handle tasks at the client-side without a server. -->
+        </h3>
+
+        <div id="theme-toggle">
+          <div id="toggle-button" class="theme-1"></div>
+          <p>: Toggle <span id="current-theme-name">(Dark-mode)</span></p>
+        </div>
+    </header>
+
+    <main>
+      <aside class="theme-1" id="naming-error">
+        <p>Please set names for both players!</p>
+        <button type="reset" class="theme-1" id="error-btn">OK</button>
+      </aside>
+
+      <aside class="theme-1" id="empty-field-error">
+        <p>Please select an empty field!</p>
+        <button type="reset" class="theme-1" id="field-empty-btn">OK</button>
+      </aside>
+
+      <aside class="theme-1" id="config-overlay">
+          <h2>Choose your name</h2>
+          <form>
+            <div class="form-control">
+              <label for="playername">Player name</label>
+              <input type="text" name="playername" id="playername" required/>
+            </div>
+            <p id="config-errors"></p>
+            <div>
+              <button type="reset" class="alt-theme-1" id="cancel-config-btn">Cancel</button>
+              <button type="submit" class="theme-1" id="submit-config-btn">Confirm</button>
+            </div>
+          </form>
+        </div>
+      </aside>
+
+      <section id="game-config">
+        <ol>
+          <li class="theme-1">
+            <article id="player-1-data">
+              <h2>Player 1</h2>
+              <h3 class="theme-1">PLAYER NAME</h3>
+              <p class="player-symbol">X</p>
+              <button id="edit-player-1-btn" class="alt-theme-1" data-playerid="1">Edit</button>
+            </article>
+          </li>
+          <li class="theme-1">
+            <article id="player-2-data">
+            <h2>Player 2</h2>
+            <h3 class="theme-1">PLAYER NAME</h3>
+            <p class="player-symbol">O</p>
+            <button id="edit-player-2-btn" class="alt-theme-1" data-playerid="2">Edit</button>
+            </article>
+          </li>
+        </ol>
+        <button class="theme-1" id="start-game-btn">Start New Game</button>
+      </section>
+
+      <section id="active-game">
+        <article id="game-over" class="theme-1">
+          <h2>You won <span id="winner-name">PLAYER NAME</span>!</h2>
+          <p>Click "Start New Game" above, to start a new game!</p>
+        </article>
+
+        <div id="turn-wrapper"><p>It's your turn <span class="theme-1" id="active-player-name">PLAYER NAME</span>!</p></div>
+        <ol id="game-board">
+          <li class="theme-1" data-row="1" data-col="1"></li>
+          <li class="theme-1" data-row="1" data-col="2"></li>
+          <li class="theme-1" data-row="1" data-col="3"></li>
+
+          <li class="theme-1" data-row="2" data-col="1"></li>
+          <li class="theme-1" data-row="2" data-col="2"></li>
+          <li class="theme-1" data-row="2" data-col="3"></li>
+
+          <li class="theme-1" data-row="3" data-col="1"></li>
+          <li class="theme-1" data-row="3" data-col="2"></li>
+          <li class="theme-1" data-row="3" data-col="3"></li>
+        </ol>
+      </section>
+  
+    </main>
+    <footer></footer>
+
+  </body>
+</html>

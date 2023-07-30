@@ -1,0 +1,128 @@
+#active-game {
+  text-align: center;
+  margin: 2rem 0 5rem 0;
+  display: none;
+}
+
+#game-over {
+  width: 80%;
+  max-width: 36rem;
+  margin: auto;
+  padding: 1rem 2rem;
+  /* background-color: black;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.5); */
+  border-radius: 4px;
+  text-align: center;
+  display: none;
+  /* animation-name: pulse; */
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  margin-bottom: 3rem;
+}
+
+#game-over.theme-1 {
+  background-color: black;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.5);
+  animation-name: pulse;
+}
+
+#game-over.theme-2 {
+  background-color: var(--off-white);
+  border: 1px solid black;
+  animation-name: pulse-theme-2;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.5);
+  }
+
+  50% {
+    box-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+  }
+
+  100% {
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.5);
+  }
+}
+
+#game-over h2 {
+  font-size: 2.5rem;
+  margin: 0.5rem;
+}
+
+#active-player-name {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+#active-player-name.theme-1 {
+  color: var(--off-white);
+}
+
+#active-player-name.theme-2 {
+  color: var(--background-dark-secondary);
+}
+
+#game-board {
+  list-style: none;
+  margin: 1rem 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 8rem);
+  grid-template-rows: repeat(3, 8rem);
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+#game-board li {
+  
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+#game-board li.theme-1 {
+background-color: var(--background-dark-secondary);
+}
+
+#game-board li.theme-2 {
+  background-color: var(--background-dark-tertiary);
+  }
+
+#game-board li.theme-1:hover {
+  background-color: var(--background-dark-tertiary);
+}
+
+#game-board li.theme-2:hover {
+  background-color: #666;
+}
+
+#game-board li.theme-1.disabled {
+  color: black;
+  background-color: var(--off-white);
+  cursor: default;
+}
+
+#game-board li.theme-2.disabled {
+  color: white;
+  background-color: var(--background-dark-secondary);
+  cursor: default;
+}
+
+@media (max-width: 350px) {
+  #game-board {
+    grid-template-columns: repeat(3, 4rem);
+    grid-template-rows: repeat(3, 4rem);
+    gap: 0.2rem;
+  }
+
+  #game-board li {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,162 @@
+:root {
+  --background-dark: rgba(0, 0, 0, 0.9);
+  --background-dark-secondary: #343434;
+  --background-dark-tertiary: rgb(169, 169, 169);
+  --off-white: rgb(225, 225, 225);
+  --hover-border: #666;
+  --hover-background: rgb(68, 68, 68);
+
+  --background-light: rgb(225, 225, 225);
+  --background-light-secondary: rgb(169, 169, 169);
+  --background-light-tertiary: #666;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  padding: 0;
+  text-align: center;
+}
+
+body.theme-1 {
+  color: white;
+  background-color: var(--background-dark);
+}
+
+body.theme-2 {
+  background-color: white;
+  color: black;
+}
+
+#main-header {
+  padding: 1rem 5%;
+  text-align: center;
+  padding: 1rem 0 0 0;
+}
+
+#main-header.theme-1 {
+  background-color: black;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+#main-header.theme-2 {
+  background-color: var(--off-white);
+  border-bottom: 1px solid var(--background-light-tertiary);
+}
+
+
+#main-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+
+#main-header h3 {
+    display: block;
+    margin: 1rem auto 0 auto;
+    text-align: center;
+    justify-content: center;
+}
+
+#theme-toggle {
+    padding: 0 1rem;
+    margin: 0;
+    display: flex;
+    /* border: 1px solid var(--off-white); */
+    justify-content: right;
+   
+}
+
+#toggle-button {
+    
+    border-radius: 5px;
+    height: 10px;
+    width: 10px;
+    margin: 20.5px 0.5rem 0 0rem;
+    cursor: pointer;
+}
+
+#toggle-button.theme-1 {
+  border: 2px solid var(--off-white);
+}
+
+#toggle-button.theme-2 {
+  border: 2px solid var(--background-light-tertiary);
+}
+
+#toggle-button:hover {
+  background-color: var(--off-white);
+}
+
+#toggle-button.theme-2:hover {
+  background-color: black;
+}
+
+button {
+  font: inherit;
+  padding: 0.2rem 1.2rem;
+  font-size: 0.9rem;
+  /* background-color: var(--background-dark);
+  border: 1px solid rgba(255, 255, 255, 0.5);*/
+  color: white; 
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button.theme-1 {
+  background-color: var(--background-dark);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: white;
+}
+
+button.theme-1:hover {
+color: white;
+  background-color: var(--hover-background);
+}
+
+ 
+button.theme-2 {
+  background-color: var(--off-white);
+  border: 1px solid var(--background-light-tertiary);
+  color: black;
+}
+
+button.theme-2:hover {
+  color: black;
+  background-color: var(--background-dark-tertiary)
+}/**/
+
+button.alt-theme-1 {
+background-color: inherit;
+  border-color: transparent;
+}
+
+button.alt-theme-1:hover {
+  color: black;
+  background-color: var(--off-white);
+}
+
+ button.alt-theme-2 {
+  color: black;
+  background-color: inherit;
+  border-color: transparent
+}
+
+button.alt-theme-2:hover {
+  color: white;
+  background-color: var(--background-dark-secondary);
+} /**/
+
+/* .btn:hover {
+  color: white;
+  background-color: var(--hover-background);
+} */
+
+/* .btn-alt {
+  background-color: inherit;
+  border-color: transparent;
+}
+
+.btn-alt:hover {
+  
+} */
