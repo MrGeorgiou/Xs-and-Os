@@ -50,10 +50,10 @@
 #game-config ol {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
     display: flex;
     width: 90vw;
-    max-width: 650px;
+    max-width: 550px;
 }
 
 #game-config li {
